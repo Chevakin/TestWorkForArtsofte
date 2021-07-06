@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using TestWorkForArtsofte.Domain.Data.DB;
 using TestWorkForArtsofte.Domain.Services;
 using TestWorkForArtsofte.Domain.Services.Interfaces;
 
@@ -22,6 +24,7 @@ namespace TestWorkForArtsofte.Net
         {
             //technical
             services.AddMvc();
+            services.AddDbContext<ArtsofteDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             //Common
             services.AddTransient<IEmployeeService, EmployeeService>();
@@ -33,10 +36,6 @@ namespace TestWorkForArtsofte.Net
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
             }
 
             app.UseStaticFiles();

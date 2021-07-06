@@ -12,8 +12,8 @@
 
         public Genders Gender { get; set; }
 
-        public Department Department { get; set; }
+        public virtual Department Department { get; set; }
 
-        public ProgrammingLanguage ProgrammingLanguage { get; set; }
+        public virtual ProgrammingLanguage ProgrammingLanguage { get; set; }
     }
 }
