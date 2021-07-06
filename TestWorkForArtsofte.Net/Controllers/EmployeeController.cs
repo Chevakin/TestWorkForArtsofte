@@ -18,13 +18,15 @@ namespace TestWorkForArtsofte.Net.Controllers
             _mapper = mapper;
         }
 
-        public JsonResult Get()
+        [Route("")]
+        [HttpGet]
+        public IActionResult Get()
         {
             var dtos = _service
                 .Get()
                 .Select(dto => _mapper.Map<EmployeeDisplayViewModel>(dto));
 
-            return Json(dtos);
+            return View(dtos);
         }
     }
 }

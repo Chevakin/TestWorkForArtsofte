@@ -18,7 +18,7 @@ namespace TestWorkForArtsofte.Domain.Data.ViewModels
         [DisplayName("Пол")]
         public string Gender { get; set; }
 
-        [DisplayName("Отдео")]
+        [DisplayName("Отдел")]
         public string Department { get; set; }
 
         [DisplayName("Язык программирования")]
