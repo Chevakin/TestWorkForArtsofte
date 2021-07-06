@@ -1,9 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TestWorkForArtsofte.Domain.Data.ViewModels;
 using TestWorkForArtsofte.Domain.Services.Interfaces;
 
 namespace TestWorkForArtsofte.Net.Controllers
@@ -12,15 +10,21 @@ namespace TestWorkForArtsofte.Net.Controllers
     public class EmployeeController : Controller
     {
         private readonly IEmployeeService _service;
+        private readonly IMapper _mapper;
 
-        public EmployeeController(IEmployeeService service)
+        public EmployeeController(IEmployeeService service, IMapper mapper)
         {
             _service = service;
+            _mapper = mapper;
         }
 
         public JsonResult Get()
         {
-            return Json(_service.Get());
+            var dtos = _service
+                .Get()
+                .Select(dto => _mapper.Map<EmployeeDisplayViewModel>(dto));
+
+            return Json(dtos);
         }
     }
 }

@@ -11,9 +11,13 @@ namespace TestWorkForArtsofte.Domain.Data.DB.ModelsConfigurations
             builder.ToTable("Employees")
                 .HasKey(e => e.ID);
 
-            builder.HasOne(e => e.Department);
+            builder
+                .HasOne(e => e.Department)
+                .WithMany(d => d.Employees);
 
-            builder.HasOne(e => e.ProgrammingLanguage);
+            builder
+                .HasOne(e => e.ProgrammingLanguage)
+                .WithMany(e => e.Employees);
 
             builder.Property(e => e.ID)
                 .ValueGeneratedOnAdd();
