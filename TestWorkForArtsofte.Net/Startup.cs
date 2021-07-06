@@ -3,10 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using TestWorkForArtsofte.Domain.Services;
+using TestWorkForArtsofte.Domain.Services.Interfaces;
 
 namespace TestWorkForArtsofte.Net
 {
@@ -22,7 +20,11 @@ namespace TestWorkForArtsofte.Net
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            //technical
+            services.AddMvc();
+
+            //Common
+            services.AddTransient<IEmployeeService, EmployeeService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

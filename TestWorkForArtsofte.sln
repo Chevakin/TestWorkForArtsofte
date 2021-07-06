@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWorkForArtsofte.Net", "TestWorkForArtsofte.Net\TestWorkForArtsofte.Net.csproj", "{7617F479-09D9-4FDF-BB96-00F9F3343464}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWorkForArtsofte.Domain", "TestWorkForArtsofte.Domain\TestWorkForArtsofte.Domain.csproj", "{91B8C713-AC43-446B-AC25-A1B1BE613AAA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7617F479-09D9-4FDF-BB96-00F9F3343464}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7617F479-09D9-4FDF-BB96-00F9F3343464}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7617F479-09D9-4FDF-BB96-00F9F3343464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91B8C713-AC43-446B-AC25-A1B1BE613AAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91B8C713-AC43-446B-AC25-A1B1BE613AAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91B8C713-AC43-446B-AC25-A1B1BE613AAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91B8C713-AC43-446B-AC25-A1B1BE613AAA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
