@@ -1,0 +1,15 @@
+﻿@model ProgrammingLanguageSimpleViewModel
+
+<form asp-antiforgery="true" action="/ProgrammingLanguages/Add" method="post">
+    <div class="item">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" />
+        <span asp-validation-for="Title"></span>
+    </div>
+    <input type="submit" value="Отправить" />
+</form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

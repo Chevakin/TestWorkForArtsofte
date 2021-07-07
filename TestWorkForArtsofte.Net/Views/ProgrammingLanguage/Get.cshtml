@@ -1,0 +1,15 @@
+﻿@model IEnumerable<ProgrammingLanguageSimpleViewModel>
+
+<table class="table">
+    <tr>
+        <th>Название</th>
+    </tr>
+    @foreach (var department in Model)
+    {
+        <tr>
+            <td>@department.Title</td>
+        </tr>
+    }
+</table>
+
+<a class="btn" asp-controller="ProgrammingLanguage" asp-action="Add">Добавить</a>

@@ -10,6 +10,8 @@ namespace TestWorkForArtsofte.Domain.Data.DB
 
         public DbSet<Department> Departments { get; set; }
 
+        public DbSet<ProgrammingLanguage> ProgrammingLanguages { get; set; }
+
         public ArtsofteDbContext(DbContextOptions options)
             : base(options)
         {
