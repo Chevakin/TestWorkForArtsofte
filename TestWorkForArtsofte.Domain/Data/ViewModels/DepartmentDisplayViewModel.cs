@@ -3,10 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TestWorkForArtsofte.Domain.Data.ViewModels
 {
-    public class DepartmentViewModel
+    public class DepartmentDisplayViewModel
     {
-        public int ID { get; set; }
-
         [Required]
         public string Title { get; set; }
 

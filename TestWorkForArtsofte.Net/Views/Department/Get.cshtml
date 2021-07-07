@@ -1,0 +1,15 @@
+﻿@model IEnumerable<DepartmentDisplayViewModel>
+
+<table class="table">
+    <tr>
+        <th>Название</th>
+        <th>Этаж</th>
+    </tr>
+    @foreach (var department in Model)
+    {
+        <tr>
+            <td>@department.Title</td>
+            <td>@department.Floor</td>
+        </tr>
+    }
+</table>

@@ -24,10 +24,10 @@ namespace TestWorkForArtsofte.Net.Controllers
 
         [Route("")]
         [HttpGet]
-        public JsonResult Get()
+        public IActionResult Get()
         {
-            return Json(_service.Get()
-                .Select(d => _mapper.Map<DepartmentViewModel>(d)));
+            return View(_service.Get()
+                .Select(d => _mapper.Map<DepartmentDisplayViewModel>(d)));
         }
     }
 }

@@ -12,7 +12,7 @@ namespace TestWorkForArtsofte.Domain.Data.DTOs.Mapping
             CreateMap<Department, DepartmentDto>();
 
             //DTO -> VM
-            CreateMap<DepartmentDto, DepartmentViewModel>();
+            CreateMap<DepartmentDto, DepartmentDisplayViewModel>();
         }
     }
 }
