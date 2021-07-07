@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DepartmentDisplayViewModel>
+﻿@model IEnumerable<DepartmentSimpleViewModel>
 
 <table class="table">
     <tr>
@@ -13,3 +13,5 @@
         </tr>
     }
 </table>
+
+<a class="btn" asp-controller="Department" asp-action="Add">Добавить</a>

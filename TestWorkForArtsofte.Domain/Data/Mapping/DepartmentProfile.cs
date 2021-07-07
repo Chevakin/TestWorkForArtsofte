@@ -8,11 +8,13 @@ namespace TestWorkForArtsofte.Domain.Data.DTOs.Mapping
     {
         public DepartmentProfile()
         {
-            //Model -> DTO
+            //Model <-> DTO
             CreateMap<Department, DepartmentDto>();
 
-            //DTO -> VM
-            CreateMap<DepartmentDto, DepartmentDisplayViewModel>();
+            //DTO <-> VM
+            CreateMap<DepartmentDto, DepartmentSimpleViewModel>();
+
+            CreateMap<DepartmentSimpleViewModel, DepartmentDto>();
         }
     }
 }

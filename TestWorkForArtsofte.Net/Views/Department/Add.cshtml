@@ -1,0 +1,20 @@
+﻿@model DepartmentSimpleViewModel
+
+<form asp-antiforgery="true" action="/Departments/Add" method="post">
+    <div class="item">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" />
+        <span asp-validation-for="Title"></span>
+    </div>
+    <div class="item">
+        <label asp-for="Floor"></label>
+        <input asp-for="Floor" value="null"/>
+        <span asp-validation-for="Floor"></span>
+    </div>
+    <input type="submit" value="Отправить" />
+</form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

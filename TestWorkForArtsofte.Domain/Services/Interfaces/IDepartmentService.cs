@@ -10,5 +10,9 @@ namespace TestWorkForArtsofte.Domain.Services.Interfaces
     public interface IDepartmentService
     {
         IEnumerable<DepartmentDto> Get();
+
+        void Add(DepartmentDto dto);
+
+        bool IsUniqueTitle(string title);
     }
 }
