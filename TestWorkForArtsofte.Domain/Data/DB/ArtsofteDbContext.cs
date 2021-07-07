@@ -8,6 +8,8 @@ namespace TestWorkForArtsofte.Domain.Data.DB
     {
         public DbSet<Employee> Employees { get; set; }
 
+        public DbSet<Department> Departments { get; set; }
+
         public ArtsofteDbContext(DbContextOptions options)
             : base(options)
         {

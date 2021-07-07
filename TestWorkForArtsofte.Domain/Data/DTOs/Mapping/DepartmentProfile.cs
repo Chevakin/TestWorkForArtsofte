@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using TestWorkForArtsofte.Domain.Data.ViewModels;
 using TestWorkForArtsofte.Domain.Models;
 
 namespace TestWorkForArtsofte.Domain.Data.DTOs.Mapping
@@ -7,7 +8,11 @@ namespace TestWorkForArtsofte.Domain.Data.DTOs.Mapping
     {
         public DepartmentProfile()
         {
+            //Model -> DTO
             CreateMap<Department, DepartmentDto>();
+
+            //DTO -> VM
+            CreateMap<DepartmentDto, DepartmentViewModel>();
         }
     }
 }

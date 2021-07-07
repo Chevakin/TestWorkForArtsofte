@@ -30,6 +30,7 @@ namespace TestWorkForArtsofte.Net
 
             //Common
             services.AddTransient<IEmployeeService, EmployeeService>();
+            services.AddTransient<IDepartmentService, DepartmentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
