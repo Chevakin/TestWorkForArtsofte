@@ -18,7 +18,7 @@
             <td>@employee.Gender</td>
             <td>@employee.Department</td>
             <td>@employee.ProgrammingLanguage</td>
-            @*<td><a asp-action="Details" asp-route-id="@customer.ID">Подробнее</a></td>*@
+            <td><a asp-action="Edit" asp-route-id="@employee.ID">Изменить</a></td>
         </tr>
     }
 </table>

@@ -1,0 +1,44 @@
+﻿@model EmployeeEditViewModel
+
+<form asp-antiforgery="true" action="/edit" method="post">
+    <div class="item">
+        <input type="hidden" asp-for="ID" />
+        <span asp-validation-for="ID"></span>
+    </div>
+    <div class="item">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="item">
+        <label asp-for="Surname"></label>
+        <input asp-for="Surname" />
+        <span asp-validation-for="Surname"></span>
+    </div>
+    <div class="item">
+        <label asp-for="Age"></label>
+        <input asp-for="Age" />
+        <span asp-validation-for="Age"></span>
+    </div>
+    <div class="item">
+        <label asp-for="Gender"></label>
+        <select asp-for="Gender" asp-items="@Html.GetEnumSelectList<Genders>()"></select>
+        <span asp-validation-for="Gender"></span>
+    </div>
+    <div class="item">
+        <label asp-for="Department"></label>
+        <select asp-for="Department" asp-items="ViewBag.Departments"></select>
+        <span asp-validation-for="Department"></span>
+    </div>
+    <div class="item">
+        <label asp-for="ProgrammingLanguage"></label>
+        <select asp-for="ProgrammingLanguage" asp-items="ViewBag.ProgrammingLanguages"></select>
+        <span asp-validation-for="ProgrammingLanguage"></span>
+    </div>
+    <input type="submit" value="Отправить" />
+</form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -7,6 +7,10 @@ namespace TestWorkForArtsofte.Domain.Services.Interfaces
     {
         IEnumerable<EmployeeDto> Get();
 
+        EmployeeDto Get(int id);
+
         void Add(EmployeeDto dto);
+
+        void Edit(EmployeeDto dto);
     }
 }

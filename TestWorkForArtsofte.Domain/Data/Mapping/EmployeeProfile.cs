@@ -16,7 +16,9 @@ namespace TestWorkForArtsofte.Domain.Data.DTOs.Mapping
                 .ForMember(vm => vm.Department, opt => opt.MapFrom(dto => dto.Department.Title))
                 .ForMember(vm => vm.ProgrammingLanguage, opt => opt.MapFrom(dto => dto.ProgrammingLanguage.Title));
 
-            CreateMap<EmployeeDto, EmployeeEditViewModel>();
+            CreateMap<EmployeeDto, EmployeeEditViewModel>()
+                .ForMember(vm => vm.Department, opt => opt.MapFrom(dto => dto.Department.ID))
+                .ForMember(vm => vm.ProgrammingLanguage, opt => opt.MapFrom(dto => dto.ProgrammingLanguage.ID));
 
             CreateMap<EmployeeEditViewModel, EmployeeDto>()
                 .ForMember(dto => dto.Department, opt => opt.MapFrom(vm => new DepartmentDto { ID = vm.Department }))
