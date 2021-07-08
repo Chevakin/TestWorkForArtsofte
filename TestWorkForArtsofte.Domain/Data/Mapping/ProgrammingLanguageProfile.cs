@@ -14,6 +14,9 @@ namespace TestWorkForArtsofte.Domain.Data.DTOs.Mapping
             //Dto <-> VM
             CreateMap<ProgrammingLanguageDto, ProgrammingLanguageSimpleViewModel>();
 
+            CreateMap<ProgrammingLanguageDto, SimpleSelectViewModel>()
+                .ForMember(vm => vm.Info, opt => opt.MapFrom(dto => dto.Title));
+
             CreateMap<ProgrammingLanguageSimpleViewModel, ProgrammingLanguageDto>();
         }
     }

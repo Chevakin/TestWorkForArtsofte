@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TestWorkForArtsofte.Domain.Data.DB;
 using TestWorkForArtsofte.Domain.Data.DTOs;
+using TestWorkForArtsofte.Domain.Models;
 using TestWorkForArtsofte.Domain.Services.Interfaces;
 
 namespace TestWorkForArtsofte.Domain.Services
@@ -17,6 +18,18 @@ namespace TestWorkForArtsofte.Domain.Services
         {
             _context = context;
             _mapper = mapper;
+        }
+
+        public void Add(EmployeeDto dto)
+        {
+            var department = _context.Departments.Find(dto.Department.ID);
+            var pl = _context.ProgrammingLanguages.Find(dto.ProgrammingLanguage.ID);
+
+            var model = new Employee(dto.Name, dto.Surname, dto.Age, dto.Gender, department, pl);
+
+            _context.Employees.Add(model);
+
+            _context.SaveChanges();
         }
 
         public IEnumerable<EmployeeDto> Get()

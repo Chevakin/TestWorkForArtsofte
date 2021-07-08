@@ -1,4 +1,4 @@
-﻿using TestWorkForArtsofte.Domain.Models;
+﻿using TestWorkForArtsofte.Domain.Data.Models;
 
 namespace TestWorkForArtsofte.Domain.Data.DTOs
 {

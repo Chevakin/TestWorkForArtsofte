@@ -1,4 +1,5 @@
 ﻿using System;
+using TestWorkForArtsofte.Domain.Data.Models;
 
 namespace TestWorkForArtsofte.Domain.Models
 {

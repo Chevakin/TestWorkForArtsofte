@@ -14,6 +14,9 @@ namespace TestWorkForArtsofte.Domain.Data.DTOs.Mapping
             //DTO <-> VM
             CreateMap<DepartmentDto, DepartmentSimpleViewModel>();
 
+            CreateMap<DepartmentDto, SimpleSelectViewModel>()
+                .ForMember(vm => vm.Info, opt => opt.MapFrom(dto => $"{dto.Title} этаж {dto.Floor}"));
+
             CreateMap<DepartmentSimpleViewModel, DepartmentDto>();
         }
     }

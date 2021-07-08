@@ -6,5 +6,7 @@ namespace TestWorkForArtsofte.Domain.Services.Interfaces
     public interface IEmployeeService
     {
         IEnumerable<EmployeeDto> Get();
+
+        void Add(EmployeeDto dto);
     }
 }
