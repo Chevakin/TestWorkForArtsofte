@@ -83,6 +83,8 @@ namespace TestWorkForArtsofte.Net.Controllers
                 try
                 {
                     _service.Edit(_mapper.Map<EmployeeDto>(model));
+
+                    RedirectToAction(nameof(Get));
                 }
                 catch
                 {
@@ -90,7 +92,7 @@ namespace TestWorkForArtsofte.Net.Controllers
                 }
             }
 
-            return RedirectToAction("edit", new { id = model.ID });
+            return RedirectToAction(nameof(Edit), new { id = model.ID });
         }
 
 
